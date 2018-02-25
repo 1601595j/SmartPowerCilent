@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sign-In Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div style="text-align: center">
+        
+        <h2>Sign-in with your email address and password</h2>
+    </div>
+    <div ng-app="smartPowerApp" ng-controller="smartPowerController">
+        <form name="signInForm" novalidate>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <p><input name="email" type="email" placeholder="Email" required></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <p><input name="password" type="password" placeholder="Password" required></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <a href="home/homepage" class="btn btn-default">Sign In</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="Scripts/angular.js"></script>
+    <script type="text/javascript">
+        var smartPowerApp = angular.module("smartPowerApp", []);
+        smartPowerApp.controller('smartPowerController', function ($scope) {
+            $scope.submit = function () {
+               
+
+            }
+            $scope.submit();
+        });
+    </script>
+</body>
+</html>

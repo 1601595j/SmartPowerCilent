@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Notification";
+}
+@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Notifications</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Activity</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Door 1</td>
+            <td>Watts decrease by 200</td>
+            <td> 23:04 </td>
+        </tr>
+        <tr>
+            <td>Door 2</td>
+            <td>Watts increase by 205</td>
+            <td> 22:15 </td>
+        </tr>
+        <tr>
+            <td>Lights 3</td>
+            <td>Watts fluctuating between 10-20</td>
+            <td> 20:00 - 23:00</td>
+        </tr>
+        <tr>
+            <td>Door 4</td>
+            <td>Watts decrease by 150</td>
+            <td> 22:00 </td>
+        </tr>
+        <tr>
+            <td>Door 4</td>
+            <td>Watts decrease by 150</td>
+            <td> 21:00 </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

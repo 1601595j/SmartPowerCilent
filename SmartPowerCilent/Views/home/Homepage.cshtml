@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "HomePage";
+}
+@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <center> <h2> Smart Power </h2> </center>
+    <div>
+        <div class="panel-body">
+            <table data-bind="foreach: activties">
+                <tr>
+                    <td><span data-bind="text: Lighting"></span>  <span data-bind="text: Format"></span> </td>
+                    <td><span data-bind="text: Machine"></span> </td>
+                    <td><span data-bind="text: Alarm"></span> </td>
+                    <td><span data-bind="text: Door"></span> </td>
+                    <td><span data-bind="text: timeDate"></span> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+</body>
+</html>
