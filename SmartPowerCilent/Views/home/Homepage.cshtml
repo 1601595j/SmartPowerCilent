@@ -4,15 +4,16 @@
 @section scripts {
     @Scripts.Render("~/bundles/app")
 }
-
 <!DOCTYPE html>
 <html>
 <head>
     <style>
+
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
+       
         }
 
         td, th {
@@ -24,23 +25,73 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+      
     </style>
 </head>
 <body>
     <center> <h2> Smart Power </h2> </center>
+
+
     <div>
         <div class="panel-body">
-            <table data-bind="foreach: activties">
+            <table>
                 <tr>
-                    <td><span data-bind="text: Lighting"></span>  <span data-bind="text: Format"></span> </td>
-                    <td><span data-bind="text: Machine"></span> </td>
-                    <td><span data-bind="text: Alarm"></span> </td>
-                    <td><span data-bind="text: Door"></span> </td>
-                    <td><span data-bind="text: timeDate"></span> </td>
+                    <th>Lighting</th>
+                    <th>Machine</th>
+                    <th>Alarm</th>
+                    <th>Door</th>
+                    <th>Time date</th>
+                    <th>Click for details</th>
                 </tr>
+            </table>
+            <table cellpadding="10" data-bind="foreach: CurrentActivities">
+
+                <tr>
+                    <td> <span data-bind="text: Lighting"></span> </td>
+                    <td> <span data-bind="text: Machine"></span> </td>
+                    <td> <span data-bind="text: Alarm"></span> </td>
+                    <td> <span data-bind="text: Door"></span> </td>
+                    <td>
+                        <span data-bind="text: Timedate"></span>
+                    </td>
+                    <td>
+                    <a href="#" data-bind="click:$parent.getActivityDetails" class="btn btn-primary btn-xs">Details</a>
+                    </td>
+                </tr>
+
             </table>
         </div>
     </div>
-        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+    <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+
+    <div  id="viewDetails" data-bind="if: details()">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Details</h2>
+            </div>
+            <form class="form-horizontal">
+                <table class="table">
+                    <tr><td>Current Activities ID </td><td><input type="text" id="CurrentActivityId" class="form-control" readonly data-bind="value:  details().CurrentActivityId" /></td></tr>
+                    <tr><td>Lighting</td><td> id="Lighting" class="form-control" data-bind="value:  details().Lighting"></td></tr>
+                    <tr><td>Machine</td><td> id="Machine" class="form-control" data-bind="value:  details().Machine"></td></tr>
+                    <tr><td>Alarm</td><td> id="Alarm" class="form-control" data-bind="value:  details().Alarm"></td></tr>
+                    <tr><td>Door</td><td> id="Door class="form-control" data-bind="value:  details().Door"></td></tr>
+                    <tr><td>Timedate</td><td> id="Timedate class="form-control" data-bind="value:  details().Timedate"></td></tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div colspan="2" align="center">
+        <a href="#" data-bind="click: saveActivity " class="btn btn-primary">Update</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" data-bind="click: removeCurrentActivites" class="btn btn-primary">Remove</a>
+    </div>
+
+
 </body>
 </html>
+
