@@ -970,6 +970,7 @@
     <Content Include="Views\home\Homepage.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\home\Status.cshtml" />
+    <Content Include="Views\home\Card.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

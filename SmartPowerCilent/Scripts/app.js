@@ -210,7 +210,39 @@
 
     };
 
+    // By : Chang Kai Wen
+    var worksURI = 'http://localhost:60854/api/CardAccess?userid=';
 
+    // consume CardAccess tap in API
+    self.tapIn = function (userid) {
+         $.ajax({
+            type: 'POST',
+            url: worksURI + userid,
+            success: function (data) {
+                alert("User tapped into of the room!");
+            },
+            error: function (err) {
+                alert("Error: " + err.status + err.statusText);
+            }
+        });
+    };
+
+    // consume CardAccess tap out API
+    // using POST with X-HTTP-Method-Override or overcome setting type to PUT
+    self.tapOut = function (userid) {
+        $.ajax({
+            type: 'PUT',
+            url: worksURI + userid,
+            headers: { "X-HTTP-Method-Override": "PUT" },
+            success: function (data) {
+                alert("User has tapped out and left the room!");
+            },
+            error: function (err) {
+                alert("Error: " + err.status + err.statusText);
+            }
+        });
+    };
+    //
 };
 
 

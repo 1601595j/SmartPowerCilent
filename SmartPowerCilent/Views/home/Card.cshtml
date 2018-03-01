@@ -1,0 +1,20 @@
+﻿@* By: Chang Kai Wen *@
+@{
+    ViewBag.Title = "Card";
+}
+@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+<div class="row" style="margin-top: 50px">
+    <h1>Simulating card access</h1>
+    <button data-bind="click: tapIn.bind($data, 8)" class="btn btn-primary btn-lg">
+        Tap In
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+    </button>
+    &nbsp; &nbsp; &nbsp;
+    <button data-bind="click: tapOut.bind($data, 8)" class="btn btn-info btn-lg">
+        Tap Out
+        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+    </button>
+</div>

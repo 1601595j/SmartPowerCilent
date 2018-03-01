@@ -111,6 +111,12 @@ namespace SmartPowerCilent.Controllers
 
         }
 
+        public ActionResult Card()
+        {
+            return View();
+        }
+
+
         public ActionResult Index()
         {
             return View();
