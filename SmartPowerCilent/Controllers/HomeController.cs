@@ -32,7 +32,19 @@ namespace SmartPowerCilent.Controllers
 
             return View();
         }
+        public ActionResult Users()
+        {
+            ViewBag.Message = "Your User page.";
 
-    
+            return View();
+        }
+
+        public ActionResult newUser()
+        {
+            ViewBag.Message = "New User page.";
+
+            return View();
+
+        }
     }
 }

@@ -72,20 +72,15 @@
             <form class="form-horizontal">
                 <table class="table">
                     <tr><td>Current Activities ID </td><td><input type="text" id="CurrentActivityId" class="form-control" readonly data-bind="value:  details().CurrentActivityId" /></td></tr>
-                    <tr><td>Lighting</td><td> id="Lighting" class="form-control" data-bind="value:  details().Lighting"></td></tr>
-                    <tr><td>Machine</td><td> id="Machine" class="form-control" data-bind="value:  details().Machine"></td></tr>
-                    <tr><td>Alarm</td><td> id="Alarm" class="form-control" data-bind="value:  details().Alarm"></td></tr>
-                    <tr><td>Door</td><td> id="Door class="form-control" data-bind="value:  details().Door"></td></tr>
-                    <tr><td>Timedate</td><td> id="Timedate class="form-control" data-bind="value:  details().Timedate"></td></tr>
+                    <tr><td>Lighting</td><td><input type="text" id="Lighting" class="form-control" data-bind="value:  details().Lighting"/></td></tr>
+                    <tr><td>Machine</td><td><input type="text" id="Machine" class="form-control" data-bind="value:  details().Machine"></td></tr>
+                    <tr><td>Alarm</td><td><input type="text" id="Alarm" class="form-control" data-bind="value:  details().Alarm"></td></tr>
+                    <tr><td>Door</td><td> <input type="text"id="Door" class="form-control" data-bind="value:  details().Door"></td></tr>
+                    <tr><td>Timedate</td><td><input type="text" id="Timedate" class="form-control" data-bind="value:  details().Timedate"></td></tr>
                 </table>
             </form>
         </div>
     </div>
-
-
-
-
-
     <div colspan="2" align="center">
         <a href="#" data-bind="click: saveActivity " class="btn btn-primary">Update</a>&nbsp;&nbsp;&nbsp;
         <a href="#" data-bind="click: removeCurrentActivites" class="btn btn-primary">Remove</a>

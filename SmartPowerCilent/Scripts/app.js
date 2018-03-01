@@ -45,6 +45,65 @@
 
     getAllUsers();
 
+    self.newUser = {
+        userId: ko.observable(),
+        email: ko.observable(),
+        user: ko.observable(),
+        password: ko.observable(),
+        number: ko.observable()
+    };
+
+    self.addUser = function () {
+        var addUser = {
+            userId: self.newUser.userId(),
+            email: self.newUser.email(),
+            user: self.newUser.user(),
+            password: self.newUser.password(),
+            number: self.newUser.number()
+        };
+        $.ajax({
+            type: 'POST',
+            url: UsersURL,
+            data: JSON.stringify(anAntivity),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                self.CurrentActivities.push(data);
+                alert("User added successfully!");
+            },
+            error: function (err) {
+                alert("Error: " + err.status + " " + err.statusText);
+            }
+        });
+
+    };
+
+    self.removeUser = function () {
+        var theUser = {
+            userId: self.details.userId,
+            email: self.details.email,
+            user: self.details.user,
+            password: self.details.password,
+            number: self.details.number,
+        };
+        if (confirm('Are you sure to delete "' + theUser.userid + '"?')) {
+            $.ajax({
+                type: 'DELETE',
+                url: UsersURL + theUser.userId,
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (data) {
+                    self.activities.remove(theUser);
+                    alert("Record has been deleted!");
+                },
+                error: function (err) {
+                    alert("Error: " + err.status + " " + err.statusText);
+                }
+            });
+        }
+    };
+
+
 
     var CurrentActivitiesURL = 'http://localhost:60854/api/currentactivities/';
 
@@ -87,7 +146,7 @@
     self.getActivityDetails = function (item) {
         $.ajax({
             type: 'GET',
-            url: CurrentActivitiesURL +"/"+ item.CurrentActivityId,
+            url: CurrentActivitiesURL + item.CurrentActivityId,
             dataType: 'json',
             contentType: 'application/json',
             success: function (data) {
@@ -102,12 +161,12 @@
 
     self.removeCurrentActivites = function () {
         var theActivity = {
-            CurrentActivityId: self.details.CurrentActivityId,
-            Lighting: self.details.Lighting,
-            Machine: self.details.Machine,
-            Alarm: self.details.Alarm,
-            Door: self.details.Door,
-            Timedate: self.details.Timedate
+            CurrentActivityId: self.details().CurrentActivityId,
+            Lighting: self.details().Lighting,
+            Machine: self.details().Machine,
+            Alarm: self.details().Alarm,
+            Door: self.details().Door,
+            Timedate: self.details().Timedate
         };
         if (confirm('Are you sure to delete "' + theActivity.Timedate + '"?')) {
             $.ajax({
@@ -190,10 +249,6 @@
 
 
 };
-
-
-
-
 
 
 ko.applyBindings(new ViewModel());

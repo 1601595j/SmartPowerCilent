@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Users";
+}
+@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <center> <h2> List of All Users </h2> </center>
+
+    <div>
+        <div class="panel-body">
+            <table>
+                <tr>
+                    <th>userID</th>
+                    <th>email</th>
+                    <th>user</th>
+                    <th>password</th>
+                    <th>number</th>
+                </tr>
+            </table>
+            <table cellpadding="10" data-bind="foreach: user">
+                <tr>
+                    <td> <span data-bind="text: userID"></span> </td>
+                    <td> <span data-bind="text: email"></span> </td>
+                    <td> <span data-bind="text: user"></span> </td>
+                    <td> <span data-bind="text: password"></span> </td>
+                    <td><span data-bind="text: number"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+    <div id="button" align="center">
+        <a href="newUser" class="btn btn-primary">Add New User</a>
+        <a href="#" data-bind="click: removeUser" class="btn btn-primary">Remove User</a>
+    </div>
+</body>
+</html>
+
