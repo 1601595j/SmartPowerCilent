@@ -7,23 +7,6 @@
     self.error = ko.observable();
     self.details = ko.observable();
 
-    var ActivitiesURI = 'http://localhost:60854/api/Activity/';
-
-    function getAllActivities() {
-        $.ajax({
-            type: 'GET',
-            url: ActivitiesURI,
-            dataType: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-                self.activities(data);
-            },
-            error: function (err) {
-                alert("Error: " + err.status + " " + err.statusText);
-            }
-        });
-    }
-    getAllActivities();
 
     var UsersURI = 'http://localhost:60854/api/Users/';
 
@@ -122,26 +105,6 @@
         });
     }
     getAllCurrentActivities();
-
-
-    var presencesURI = 'http://localhost:60854/api/Presence/';
-
-    function getAllpresences() {
-        $.ajax({
-            type: 'GET',
-            url: presencesURI,
-            dataType: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-                self.presences(data);
-            },
-            error: function (err) {
-                alert("Error: " + err.status + " " + err.statusText);
-            }
-        });
-    }
-
-    getAllpresences();
 
     self.getActivityDetails = function (item) {
         $.ajax({
