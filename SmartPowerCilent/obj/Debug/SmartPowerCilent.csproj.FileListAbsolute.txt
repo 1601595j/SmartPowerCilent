@@ -40,3 +40,45 @@ C:\Users\ASUS User\source\repos\SmartPowerCilent\SmartPowerCilent\obj\Debug\Smar
 C:\Users\ASUS User\source\repos\SmartPowerCilent\SmartPowerCilent\obj\Debug\SmartPowerCilent.dll
 C:\Users\ASUS User\source\repos\SmartPowerCilent\SmartPowerCilent\obj\Debug\SmartPowerCilent.pdb
 C:\Users\ASUS User\source\repos\SmartPowerCilent\SmartPowerCilent\obj\Debug\SmartPowerCilent.csprojResolveAssemblyReference.cache
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\ApplicationInsights.config
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\SmartPowerCilent.dll.config
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\SmartPowerCilent.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\SmartPowerCilent.pdb
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Antlr3.Runtime.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.Web.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Newtonsoft.Json.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Helpers.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Mvc.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Optimization.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Razor.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.Razor.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\WebGrease.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Helpers.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Mvc.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Optimization.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.Razor.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\System.Web.WebPages.Razor.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Antlr3.Runtime.pdb
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Newtonsoft.Json.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\bin\Microsoft.AI.Web.xml
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\obj\Debug\SmartPowerCilent.csprojResolveAssemblyReference.cache
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\obj\Debug\SmartPowerCilent.csproj.CoreCompileInputs.cache
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\obj\Debug\SmartPowerCilent.dll
+C:\Users\Chang Kai Wen\source\repos\SmartPowerClient\SmartPowerCilent\obj\Debug\SmartPowerCilent.pdb

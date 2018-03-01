@@ -84,7 +84,7 @@
             email: self.details.email,
             user: self.details.user,
             password: self.details.password,
-            number: self.details.number,
+            number: self.details.number
         };
         if (confirm('Are you sure to delete "' + theUser.userid + '"?')) {
             $.ajax({
