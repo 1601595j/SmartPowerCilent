@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewBag.Title = "HomePage";
 }
 @section scripts {
@@ -35,16 +35,19 @@
     <div>
         <div class="panel-body">
             <table>
-                <tr>
-                    <th>Lighting</th>
-                    <th>Machine</th>
-                    <th>Alarm</th>
-                    <th>Door</th>
-                    <th>Time date</th>
-                    <th>Click for details</th>
-                </tr>
-            </table>
-            <table cellpadding="10" data-bind="foreach: CurrentActivities">
+                <thead>
+                    <tr>
+                        <th>Lighting</th>
+                        <th>Machine</th>
+                        <th>Alarm</th>
+                        <th>Door</th>
+                        <th>Time date</th>
+                        <th>Click for details</th>
+                    </tr>
+
+                </thead>
+              
+            <tbody cellpadding="10" data-bind="foreach: CurrentActivities">
 
                 <tr>
                     <td> <span data-bind="text: Lighting"></span> </td>
@@ -58,34 +61,34 @@
                     <a href="#" data-bind="click:$parent.getActivityDetails" class="btn btn-primary btn-xs">Details</a>
                     </td>
                 </tr>
-
-            </table>
+            </tbody>
+          </table>
         </div>
     </div>
     <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
-
-    <div  id="viewDetails" data-bind="if: details()">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">Details</h2>
+    <div>
+        <div id="viewDetails" data-bind="if: details()">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Details</h2>
+                </div>
+                <form class="form-horizontal">
+                    <table class="table">
+                        <tr><td>Current Activities ID </td><td><input type="text" id="CurrentActivityId" class="form-control" readonly data-bind="value:  details().CurrentActivityId" /></td></tr>
+                        <tr><td>Lighting</td><td><input type="text" id="Lighting" class="form-control" data-bind="value:  details().Lighting" /></td></tr>
+                        <tr><td>Machine</td><td><input type="text" id="Machine" class="form-control" data-bind="value:  details().Machine"></td></tr>
+                        <tr><td>Alarm</td><td><input type="text" id="Alarm" class="form-control" data-bind="value:  details().Alarm"></td></tr>
+                        <tr><td>Door</td><td> <input type="text" id="Door" class="form-control" data-bind="value:  details().Door"></td></tr>
+                        <tr><td>Timedate</td><td><input type="text" id="Timedate" class="form-control" data-bind="value:  details().Timedate"></td></tr>
+                    </table>
+                </form>
             </div>
-            <form class="form-horizontal">
-                <table class="table">
-                    <tr><td>Current Activities ID </td><td><input type="text" id="CurrentActivityId" class="form-control" readonly data-bind="value:  details().CurrentActivityId" /></td></tr>
-                    <tr><td>Lighting</td><td><input type="text" id="Lighting" class="form-control" data-bind="value:  details().Lighting"/></td></tr>
-                    <tr><td>Machine</td><td><input type="text" id="Machine" class="form-control" data-bind="value:  details().Machine"></td></tr>
-                    <tr><td>Alarm</td><td><input type="text" id="Alarm" class="form-control" data-bind="value:  details().Alarm"></td></tr>
-                    <tr><td>Door</td><td> <input type="text"id="Door" class="form-control" data-bind="value:  details().Door"></td></tr>
-                    <tr><td>Timedate</td><td><input type="text" id="Timedate" class="form-control" data-bind="value:  details().Timedate"></td></tr>
-                </table>
-            </form>
+        </div>
+        <div colspan="2" align="center">
+            <a href="#" data-bind="click: saveActivity " class="btn btn-primary">Add</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" data-bind="click: removeCurrentActivites" class="btn btn-primary">Remove</a>
         </div>
     </div>
-    <div colspan="2" align="center">
-        <a href="#" data-bind="click: saveActivity " class="btn btn-primary">Update</a>&nbsp;&nbsp;&nbsp;
-        <a href="#" data-bind="click: removeCurrentActivites" class="btn btn-primary">Remove</a>
-    </div>
-
 
 </body>
 </html>
