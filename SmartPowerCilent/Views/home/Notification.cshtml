@@ -1,55 +1,55 @@
-﻿
-@{
-    ViewBag.Title = "newUser";
+﻿@{
+    ViewBag.Title = "Notification";
+}
+@section scripts {
+    @Scripts.Render("~/bundles/app")
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Add New User</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div style="text-align: center">
+<div class="page-header">
+    <h1>Notifications</h1>
+</div>
 
-        <h2>Enter the new user details</h2>
-    </div>
-    <div ng-app="smartPowerApp" ng-controller="smartPowerController">
-        <form name="signInForm" novalidate>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <p><input name="userID" type="text" placeholder="userID" required></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <p><input name="email" type="email" placeholder="Email" required></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <p><input name="user" type="text" placeholder="Username" required></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <p><input name="password" type="password" placeholder="Password" required></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <p><input name="number" type="text" placeholder="Phone Number" required></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <a href="Users" data-bind="click: addUser" class="btn btn-default">Add</a>
-                    </div>
-                </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Status</h2>
             </div>
-        </form>
+            <div class="panel-body">
+                <table cellpadding="10" data-bind="foreach: Notifications">
+                    <tr>
+                        <td valign="top">
+                            Id Number <span data-bind="text: NotificationID"></span><br />
+                            Date Accessed <span data-bind="text: timeDate"></span> <br />
+                            <a href="#" data-bind="click:$parent.getNotificationDetails" class="btn btn-primary btn-xs"> Details </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
     </div>
-</body>
-</html>
+
+    <!-- TODO: View Product Details >> Update/Delete -->
+    <div class="col-md-offset-6" id="notificationdetails" data-bind="if: notificationdetails()">
+        <!-- if details containing the return product, i.e. not null
+        Then the div will be shown with the data-binding as shown -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Details</h2>
+            </div>
+            <form class="form-horizontal">
+                <table class="table">
+
+                    <tr><td>Name Id><td><input type="text" id="NotificationID" class="form-control" readonly data-bind="value: notificationdetails(). NotificationID" /></td></tr>
+                    <tr><td>DateTime><td><input type="text" id="DateTime" class="form-control" readonly data-bind="value: notificationdetails(). timeDate" /></td></tr>
+                    <tr></tr>
+                    <td colspan="2" align="center">
+                        <a href="#" data-bind="click:removeNotifications" class="btn btn-primary">Remove</a>
+                    </td>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

@@ -48,16 +48,42 @@
                     <td> <span data-bind="text: email"></span> </td>
                     <td> <span data-bind="text: user"></span> </td>
                     <td> <span data-bind="text: password"></span> </td>
-                    <td><span data-bind="text: number"></span></td>
+                    <td> <span data-bind="text: number"></span></td>
+                    <td> <a href="#" data-bind="click: $parent.getUserDetails" class="btn btn-primary btn-xs">Select</td>
                 </tr>
             </table>
         </div>
     </div>
     <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
-    <div id="button" align="center">
-        <a href="newUser" class="btn btn-primary">Add New User</a>
-        <a href="#" data-bind="click: removeUser" class="btn btn-primary">Remove User</a>
-    </div>
+
+    <!-- TODO: View Product Details >> Update/Delete -->
+    <div class="col-md-offset-6" id="userdetails" data-bind="if: userdetails()">
+        <!-- if details containing the return product, i.e. not null
+        Then the div will be shown with the data-binding as shown -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Details</h2>
+            </div>
+            <form class="form-horizontal">
+                <table class="table">
+
+                    <tr><td>User Id><td><input type="text" id="userID" class="form-control" readonly data-bind="value: userdetails(). userID" /></td></tr>
+                    <tr><td>email><td><input type="text" id="email" class="form-control" readonly data-bind="value: userdetails(). email" /></td></tr>
+                    <tr><td>user><td><input type="text" id="user" class="form-control" readonly data-bind="value: userdetails(). user" /></td></tr>
+                    <tr><td>password><td><input type="text" id="password" class="form-control" readonly data-bind="value: userdetails(). password" /></td></tr>
+                    <tr><td>number><td><input type="text" id="number" class="form-control" readonly data-bind="value: userdetails(). number" /></td></tr>
+                    <tr></tr>
+                </table>
+                   
+                    <div colspan="2" align="center">
+
+                        <a href="#" data-bind="click:removeUser" class="btn btn-primary">Remove</a>
+                    </div>
+                </form>
+                    <div id="button" align="center">
+                        <a href="newUser" class="btn btn-primary">Add New User</a>
+                    </div>
+            </div>
 </body>
 </html>
 
